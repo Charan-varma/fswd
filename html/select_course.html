@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Course Selection</title>
+    </head>
+    <body>
+        <h1>Course Selection</h1>
+        <form>
+            <label for="course">Course</label>
+            <!-- Dropdown Listbox --> 
+            <select id="course">
+                <option value="jse">Java SE</option>
+                <option value="jee">Java EE</option>
+                <option selected value="fer">Front-end with React</option>
+                <option value="python">Python</option>
+            </select>
+            <p></p>
+            <label for="startdate">Starting Date</label>
+            <input type="date" id="startdate"/>
+            <p></p>
+            <label for="timings">Timings</label>
+            <input type="radio" name="timings" value="m">Morning</input>
+            <input type="radio" name="timings" value="a">Afternoon</input>
+            <input type="radio" name="timings" value="e">Evening</input>
+            <p></p>
+            <input type="checkbox" value="cm">Printed Course Material</input>
+            <p></p>
+            <input type="checkbox" value="pc">Printed Certificate</input>
+            <p></p>
+            <input type="checkbox" value="os">Are you old student</input>
+            <p></p>
+            Pax : 
+            <input type="number" name="pax" min="1" max="10" />
+            <p></p>
+            <input type="submit" value="Calculate" />
+        </form>
+    </body>
+</html>

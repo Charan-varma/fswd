@@ -1,0 +1,10 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+
+h1 {
+    color: #0071c5;
+    text-align: center;
+}

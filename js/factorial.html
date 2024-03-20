@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Factorial</title>
+    <script>
+        function showFactorial() {
+            var txtNum = document.getElementById("num")
+            var num = txtNum.value
+
+            var fact = 1
+
+            for (let i = 2; i <= num; i++) {
+
+                fact *= i
+
+            }
+
+            var output = document.getElementById("output")
+            output.innerHTML = fact
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Factorial</h1>
+    Number: 
+    <input type="number" id="num"></input>
+    <button onclick="showFactorial()">Factorial</button>
+    <h2 id="output"></h2>
+</body>
+</html>

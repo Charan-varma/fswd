@@ -1,0 +1,76 @@
+<html>
+<head>
+    <title>Names</title>
+</head>
+<body>
+    <h1>Names</h1>
+    <label for="name">Name: </label>
+    <input type="text" id="name" />
+    <p></p>
+    <button onclick="addName()">Add Name</button>
+
+    <ul id="ulnames">
+
+    </ul>
+
+    <script>
+        var names = []
+        var n = document.getElementById("name")
+        var ulnames = document.getElementById("ulnames")
+        function addName() {
+            let flag = 0
+            for (let i of names) {
+                if (i === n.value) {
+                    flag = 1
+                    break
+                }
+                else {
+                    flag = 0
+                }
+            }
+            if (flag === 1) {
+                alert("Name already exists")
+            }
+            else {
+                names.push(n.value)
+            }
+            showNames()
+        }
+
+        function showNames() {
+            var bullets = ""
+            
+            for (var bn of names) {
+                bullets += `<li>${bn}</li><button onclick="deleteName()" id=${bn}>Delete</button>`
+            }
+
+            ulnames.innerHTML = bullets
+        }
+
+        function deleteName() {
+            
+
+
+            let flag = 0
+            var bnvalue = document.getElementById(`${bn}`).value
+            for (let i in names) {
+                if (names[i] === bnvalue) {
+                    names.splice(i,1)
+                    showNames()
+                    flag = 1
+                    break
+                }
+                else{
+                    flag = 0
+                }
+            }
+            if (flag === 1) {
+                alert(names)
+            }
+            else {
+                alert("Name not found")
+            }
+        }
+    </script>
+</body>
+</html>

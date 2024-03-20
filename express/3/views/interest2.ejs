@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Interest Calculation</title>
+</head>
+<body>
+    <form method="post">
+        Amount: <br>
+        <input type="number" name="amount" value="<%= amount %>"/>
+        <p></p>
+        Rate: <br>
+        <input type="number" name="rate" value="<%= rate %>"/>
+        <p></p>
+        <button>Calculate</button>
+    </form>
+    <h1>
+        <% if(interest) { %>
+            <%= interest %>
+        <% } %>
+    </h1>
+</body>
+</html>

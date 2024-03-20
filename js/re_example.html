@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Regular Expression</title>
+</head>
+<body>
+    <label for="mobile">Mobile No: </label>
+    <input type="number" id="mobileno"></input>
+    <p></p>
+    <label for="password">Password: </label>
+    <input type="password" id="passwd"></input>
+    <p></p>
+    <button type="submit" onclick="checkMobile()">Submit</button>
+    <ul id="ulelement">
+    </ul>
+    <script>
+        var mobile
+        var pwd
+        var details_mob = []
+        var details_pass = []
+        function checkMobile() {
+            var txtmob = document.getElementById("mobileno")
+            mobile = txtmob.value
+            var re_mob = /\d{10}/
+
+            if (!re_mob.test(mobile)) {
+                alert("Please enter valid Mobile number")   
+            }
+            else {
+                checkPassword()
+            }
+        }
+
+        function checkPassword() {
+            var txtpwd = document.getElementById("passwd")
+            pwd = txtpwd.value
+            var re_pwd1 = /[A-Z]+/
+            var re_pwd2 = /\d+/
+            var re_pwd3 = /[@#*-]+/
+
+            if (re_pwd1.test(pwd) && re_pwd2.test(pwd) && re_pwd3.test(pwd)) {
+                showDetails()
+            }
+            else {
+                alert("Please enter password with atleast 1 Uppercase, 1 digit and 1 special character(@,#,*,_)")
+            }
+        }
+        function showDetails() {            
+            details_mob.push(mobile)
+            details_pass.push(pwd)
+            
+            var bullets=""
+
+            for (let i in details_mob) {
+                bullets += `<li>Mobile: ${details_mob[i]}</li> Password: ${details_pass[i]}`
+            }
+            var ulElement = document.getElementById("ulelement")
+            ulElement.innerHTML = bullets
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+body {
+    background-color: black;
+    color: yellow;
+    font-family: Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    color: #0071c5;
+}
+
+th {
+    color: green;
+}
+
+td {
+    color: pink;
+}

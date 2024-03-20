@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Stop Clock</title>
+</head>
+<body>
+    <h1 id="clock">0</h1>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+
+    <script>
+        var clock = document.getElementById("clock")
+        var id
+        var cd = 0
+        function start() {
+            id = setInterval(showTime, 1000)
+        }
+
+        function stop() {
+            clearInterval(id)
+        }
+
+        function showTime() {
+            cd += 1
+            clock.innerHTML = cd
+        }
+    </script>
+</body>
+</html>

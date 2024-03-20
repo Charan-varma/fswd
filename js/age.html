@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Age Category</title>
+    <script>
+        function showCategory() {
+            var txtAge = document.getElementById("age")
+            var age = txtAge.value
+
+            var category
+
+            if (age >= 1 && age < 13) {
+                category = "Child"
+            }        
+            else if (age >=13 && age < 22) {
+                category = "Teenage"
+            }
+            else if (age >= 22 && age < 60) {
+                category = "Adult"
+            }
+            else if (age >= 60){
+                category = "Senior"
+            }
+
+            var output = document.getElementById("output")
+            output.innerHTML = category
+        }
+    </script>
+</head>
+<body>
+    <h1>Age Category</h1>
+    <label for="age">Age: </label>
+    <input type="number" id="age" min ="1" max ="100"></input>
+    <p></p>
+    <button onclick="showCategory()">Category</button>
+    <p></p>
+    Category: 
+    <output id="output"></output>
+</body>
+</html>

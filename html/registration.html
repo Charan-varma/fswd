@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>Registration</title>
+    <link href="reg_styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>Registration</h1>
+    <hr style="color: #0071c5">
+    <form>
+        <table cellpadding="5pt">
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" id="name" /></td>
+            </tr>
+            <p></p>
+            <tr>
+                <td><label for="emailadd">Email Address</label></td>
+                <td>
+                    </t><input type="email" id="emailadd" /></td>
+            </tr>
+            <p></p>
+            <tr>
+                <td><label for="mobile">Mobile</label></td>
+                <td><input type="tel" maxlength="10" /></td>
+            </tr>
+            <p></p>
+            <tr>
+                <td><input type="checkbox" value="subscribe">Subscribe to newsletter</input></td>
+            </tr>
+            <p></p>
+            <tr>
+                <td><label for="occupation">Occupation</label></td>
+                <td><input type="radio" name="occupation" value="emp">Employee</input>
+                    <input type="radio" name="occupation" value="stud" checked="checked">Student</input>
+                    <input type="radio" name="occupation" value="other">Others</input>
+                </td>
+            </tr>
+            <p></p>
+            <tr>
+                <td><label for="favLan">Favorite Language</label></td>
+                <!-- Dropdown List -->
+                <td><select>
+                        <option selected value="java">Java</option>
+                        <option value="python">Python</option>
+                        <option value="c++">C++</option>
+                        <option value="c">C</option>
+                        <option value="php">PHP</option>
+                    </select></td>
+            </tr>
+            <p></p>
+            <tr>
+                <td><label for="age">Age</label></td>
+                <td><input type="number" id="age" min="18" max="100"></td>
+            </tr>
+            <p></p>
+            <tr>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+            <table>
+    </form>
+</body>
+
+</html>

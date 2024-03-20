@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Total Sum</title>
+    <script>
+        function totalSum(){
+            var txtNum = document.getElementById("marks")
+            var num = txtNum.value
+            nums = num.split(",")
+            
+            var total_sum = 0
+            for (n of nums) {
+                total_sum += parseInt(n) 
+            }   
+            
+            var output = document.getElementById("output")
+            output.innerHTML = total_sum
+        }
+    </script>
+</head>
+<body>
+    <h1>Sum</h1>
+    <label for="marks">Marks: </label>
+    <input type="text" id="marks" />
+    <p></p>
+    <button onclick="totalSum()">Total Sum</button>
+    <p></p>
+    Total Sum:
+    <output id="output"></output>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Courses</title>
+</head>
+<body>
+    <h1>Courses</h1>
+    <h2>Trainer : <%= trainer %></h2>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Fee</th>
+        </tr>
+        
+        <% courses.forEach( c => { %>
+            <tr>
+                <td> <%= c.title %> </td>
+                <td> <%= c.fee.toString() %> </td>
+            </tr> 
+        <% }) %>    
+        </table>
+</body>
+</html>

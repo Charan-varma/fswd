@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Dialog Boxes</title>
+</head>
+<body>
+    <button onclick="showDate()">Show Date</button>
+    <button onclick="takeConfirmation()">Take Confirmation</button>
+    <button onclick="takeName()">Take Name</button>
+    
+    <script>
+        function showDate() {
+            alert(new Date())
+        }
+
+        function takeConfirmation() {
+            var result = confirm("Do you want to go???")
+            if (result) {
+                alert("Yes!!!")
+            }
+            else {
+                alert("No...")
+            }
+        }
+
+        function takeName() {
+            var name = prompt("Enter your name : ")
+            alert("Hello " + name)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>BMI Index</title>
+    <script>
+        function calculateBMI() {
+            var txtFeet = document.getElementById("feet")
+            var feet = txtFeet.value
+            var txtInch = document.getElementById("inches")
+            var inch = txtInch.value
+            var txtWeight = document.getElementById("weight")
+            var weight = txtWeight.value
+    
+            var bmi
+            var inches = feet * 12 + parseInt(inch)
+            bmi = (weight / (inches * inches)) * 703
+
+            var output = document.getElementById("output")
+            output.innerHTML = bmi
+
+            var status
+            var bmioutput = document.getElementById("bmioutput")
+
+            if (bmi < 18.5) {
+                status="Under Weight"
+            }
+            else if(bmi >=18.5 && bmi < 25) {
+                status="Healthy Weight"
+            }
+            else if(bmi >= 25 && bmi <30) {
+                status="Over Weight"
+            }
+            else if(bmi >= 30) {
+                status="Obesity"
+            }
+
+            bmioutput.innerHTML = status
+        }
+    </script>
+</head>
+<body>
+    <h2>BMI Index</h2>
+    <label for="height">Height: </label>
+    <input type="number" id="feet" min="1" max="7"> feet</input>
+    <input type="number" id="inches" min="0" max="11"> inches</input>
+    <p></p>
+    <label for="weight">Weight: </label>
+    <input type="number" id="weight" max="500"> pounds</input>
+    <p></p>
+    <label for="gender">Gender: </label>
+    <input type="radio" value="male" id="male">Male</input>
+    <input type="radio" value="female" id="female">Female</input>
+    <p></p>
+    <button onclick="calculateBMI()">Calculate</button>
+    <p></p>
+    <h3>BMI: </h3>
+    <output id="output"></output>
+    <h3>Status: </h3>
+    <output id="bmioutput"></output>
+</body>
+</html>
